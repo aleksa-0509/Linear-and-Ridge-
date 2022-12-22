@@ -17,20 +17,22 @@ def train_test_split(X, y)
                                                     )
 return X_train, X_test, y_train, y_test
 
-logger.info('Df is extracted')
+    logger.info('Df is extracted')
 
-save.model ('model/conf/linear_regression.pkl', model=rg)
+    save.model ('model/conf/linear_regression.pkl', model=rg)
 
-df = get_data("https://raw.githubusercontent.com/5x12/ml-cookbook/master/supplements/data/cars.csv")
-print(df)
+    df = get_data("https://raw.githubusercontent.com/5x12/ml-cookbook/master/supplements/data/cars.csv")
+    print(df)
 
 
 def training()
 
-reg = LinearRegression()
+    reg = LinearRegression()
 
-reg.fit(X_train, y_train)
+    reg.fit(X_train, y_train)
 
-reg = Ridge(alpha=4.0, max_iter = 10000)
+    reg = Ridge(alpha=4.0, max_iter = 10000)
 
-reg.fit(X_train, y_train)
+    reg.fit(X_train, y_train)
+    
+return LinearRegression
